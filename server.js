@@ -30,8 +30,10 @@ app.get("/", (req, res) => {
 
 // * ------------------------Router----------------------------
 import companyRouter from "./router/companyRouter.js";
+import productRouter from "./router/ProductRouter.js";
 
 app.use("/api/v1/companies", companyRouter);
+app.use("/api/v1/product", productRouter);
 
 app.get("/api/v1/test", (req, res) => {
   res.json({ msg: "test route" });
